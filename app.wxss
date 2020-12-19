@@ -9,7 +9,7 @@ page, view, text, swiper, swiper-item, image, navigator {
 }
 
 page {
-  --themeColor: #eb4450;
+  --themeColor: #346efe;
 }
 image {
   width: 100%;

@@ -1,5 +1,9 @@
 // pages/category/index.js
-import { request } from "../../request/index.js";
+import {
+  request
+} from "../../request/index.js";
+
+import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
 
   /**
@@ -11,34 +15,51 @@ Page({
     // 右边商品数据
     rightContent: [],
     // 左边被选中
-    currentIndex: 0
+    currentIndex: 0,
+    // 右侧列表置顶
+    scrollTop: 0
   },
   // 接口返回数据
   Cates: [],
   // 获取分类数据
-  getCatesList: function () {
-    request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/categories'
-    }).then(res => {
-      this.Cates = res.data.message
-      // 把接口数据存入本地缓存中
-      wx.setStorageSync('cates', {time: Date.now(), data: this.Cates})
-      // 左边
-      let leftMenuList =  this.Cates.map(v => v.cat_name)
-      let rightContent = this.Cates[0].children
-      this.setData({
-        leftMenuList,
-        rightContent
-      })
+  async getCatesList() {
+    // request({
+    //   url: '/categories'
+    // }).then(res => {
+    //   this.Cates = res.data.message
+    //   // 把接口数据存入本地缓存中
+    //   wx.setStorageSync('cates', {time: Date.now(), data: this.Cates})
+    //   // 左边
+    //   let leftMenuList =  this.Cates.map(v => v.cat_name)
+    //   let rightContent = this.Cates[0].children
+    //   this.setData({
+    //     leftMenuList,
+    //     rightContent
+    //   })
+    // })
+    const res = await request({url: '/categories'})
+    this.Cates = res
+    // 把接口数据存入本地缓存中
+    wx.setStorageSync('cates', {
+      time: Date.now(),
+      data: this.Cates
+    })
+    // 左边
+    let leftMenuList = this.Cates.map(v => v.cat_name)
+    let rightContent = this.Cates[0].children
+    this.setData({
+      leftMenuList,
+      rightContent
     })
   },
   // 左侧菜单点击事件
-  handleItemTap (e) {
+  handleItemTap(e) {
     let index = e.currentTarget.dataset.index
     let rightContent = this.Cates[index].children
     this.setData({
       currentIndex: index,
-      rightContent
+      rightContent,
+      scrollTop: 0
     })
   },
   /**
@@ -68,16 +89,17 @@ Page({
         // 有旧数据(没有过期) 
         console.log('可使用旧数据!!!!');
         this.Cates = Cates.data
-        let leftMenuList =  this.Cates.map(v => v.cat_name)
+        let leftMenuList = this.Cates.map(v => v.cat_name)
         let rightContent = this.Cates[0].children
         this.setData({
           leftMenuList,
           rightContent
         })
-        
+
       }
     }
-  },  /**
+  },
+  /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {

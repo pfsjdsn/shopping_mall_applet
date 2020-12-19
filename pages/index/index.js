@@ -1,4 +1,5 @@
 import { request } from "../../request/index.js";
+
 Page({
 
   /**
@@ -13,32 +14,32 @@ Page({
     floorList: []
   },
   // 获取轮播图数据
-  getSwiperList:function () {
+  getSwiperList:function ()  {
     request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata'
+      url: '/home/swiperdata'
     }).then(res => {
       this.setData({
-        swiperList: res.data.message
+        swiperList: res
       })
     })
   },
   // 获取导航数据
   getCateList:function () {
     request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/catitems'
+      url: '/home/catitems'
     }).then(res => {
       this.setData({
-        catesList: res.data.message
+        catesList: res
       })
     })
   },
   // 获取导航数据
   getFloorList:function () {
     request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/floordata'
+      url: '/home/floordata'
     }).then(res => {
       this.setData({
-        floorList: res.data.message
+        floorList: res
       })
     })
   },

@@ -10,7 +10,7 @@
     </view>
   </scroll-view>
   <!-- 右 -->
-  <scroll-view scroll-y class="right_content">
+  <scroll-view scroll-y class="right_content" scroll-top="{{scrollTop}}">
     <view class="good_group" 
     wx:for="{{rightContent}}" wx:for-index="index1" wx:for-item="item1">
       <view class="good_title">
@@ -19,7 +19,10 @@
         <text class="delimiter">/</text>
       </view>
       <view class="good_list">
-        <navigator wx:for="{{item1.children}}" wx:for-index="index2" wx:for-item="item2" wx:key="cat_id">
+        <navigator wx:for="{{item1.children}}" wx:for-index="index2" 
+        wx:for-item="item2" wx:key="cat_id"
+        url="/pages/goods_list/index?cid={{item2.cat_id}}"
+        >
           <image src="{{item2.cat_icon}}" mode="widthFix"></image>
           <view class="goods_name">{{item2.cat_name}}</view>
         </navigator>

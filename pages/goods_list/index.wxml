@@ -2,15 +2,19 @@
 <Tabs tabs="{{tabs}}" bindtabsItemChange="tabsItemChange">
   <block wx:if="{{tabs[0].isActive}}">
     <view class="first_tab">
-      <navigator class="goods_item">
+      <navigator class="goods_item" 
+      wx:for="{{goodsList}}"
+      wx:key="{{goods_id}}"
+      url="/pages/goos_detail/index?goods_id={{item.goods_id}}"
+      >
         <!-- 左图 -->
-        <view class="goods_img_wrap">
-          <image mode="widthFix" src="https://api-hmugo-web.itheima.net/full/2fb113b32f7a2b161f5ee4096c319afedc3fd5a1.jpg"></image>
-        </view>
+        <!-- <view class="goods_img_wrap"> -->
+          <image mode="widthFix" src="{{item.goods_big_logo ? item.goods_big_logo : '../../icons/no_img.png'}}"></image>
+        <!-- </view> -->
         <!-- 右内容 -->
         <view class="goods_info_wrap">
-          <view class="goods_name">aaaaaaaaaaaaaaaaaaaaaaaaaaaa</view>
-          <view class="goods_price">￥ 10000</view>
+          <view class="goods_name">{{item.goods_name}}</view>
+          <view class="goods_pcice">￥ {{item.goods_price}}</view>
         </view>
       </navigator>
     </view>

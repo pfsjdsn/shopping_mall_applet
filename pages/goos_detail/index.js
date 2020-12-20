@@ -1,20 +1,28 @@
-// pages/goos_detail/index.js
+import {request} from "../../request/index.js";
+import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    goodsObj: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getGoosDetail( options.goods_id)
   },
-
+  async getGoosDetail(goods_id) {
+    console.log(goods_id);
+    
+    const goodsObj = await request({url: "/goods/detail", data: {goods_id}})
+    this.setData({goodsObj})
+    console.log(goodsObj);
+    
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

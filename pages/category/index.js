@@ -1,8 +1,5 @@
 // pages/category/index.js
-import {
-  request
-} from "../../request/index.js";
-
+import {request} from "../../request/index.js";
 import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
 
@@ -23,20 +20,6 @@ Page({
   Cates: [],
   // 获取分类数据
   async getCatesList() {
-    // request({
-    //   url: '/categories'
-    // }).then(res => {
-    //   this.Cates = res.data.message
-    //   // 把接口数据存入本地缓存中
-    //   wx.setStorageSync('cates', {time: Date.now(), data: this.Cates})
-    //   // 左边
-    //   let leftMenuList =  this.Cates.map(v => v.cat_name)
-    //   let rightContent = this.Cates[0].children
-    //   this.setData({
-    //     leftMenuList,
-    //     rightContent
-    //   })
-    // })
     const res = await request({url: '/categories'})
     this.Cates = res
     // 把接口数据存入本地缓存中

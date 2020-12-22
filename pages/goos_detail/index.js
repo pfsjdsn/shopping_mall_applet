@@ -8,7 +8,7 @@ Page({
   data: {
     goodsObj: {}
   },
-
+  goodsInfo: {},
   /**
    * 生命周期函数--监听页面加载
    */
@@ -16,12 +16,27 @@ Page({
     this.getGoosDetail( options.goods_id)
   },
   async getGoosDetail(goods_id) {
-    console.log(goods_id);
-    
     const goodsObj = await request({url: "/goods/detail", data: {goods_id}})
-    this.setData({goodsObj})
-    console.log(goodsObj);
+    this.goodsInfo = goodsObj
+    this.setData({
+      goodsObj: {
+        goods_name: goodsObj.goods_name,
+        goods_price: goodsObj.goods_price,
+        // iphone 部分手机不识别webp图片格式
+        goods_introduce: goodsObj.goods_introduce.replace(/\.webp/g, '.jpg'),
+        pics: goodsObj.pics,
+      }
+    })
     
+  },
+  // 放大轮播图
+  handlePrevewImage(e) {
+    const urls = this.goodsInfo.pics.map(v =>v.pics_mid)
+    const current = e.currentTarget.dataset.urls
+    wx.previewImage({
+      current, // 当前显示图片的http链接
+      urls // 需要预览的图片http链接列表
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -12,14 +12,21 @@ Page({
   },
   // 获取用户信息
   async handleGetUserInfo(e) {
-    console.log(e);
-    const {encryptedData, rawData, iv, signature} = e.detail
+    try {
+      const {encryptedData, rawData, iv, signature} = e.detail
     // 获取登录后的code
-    console.log(encryptedData, rawData, iv, signature);
     const {code} = await login()
-    const loginParams =  {encryptedData, rawData, iv, signature,code}
+    const loginParams =  {encryptedData, rawData, iv, signature, code}
     console.log(loginParams);
-    const res = await request({url:"/users/wxlogin",data:loginParams,method:"post"});
-    console.log(res);
+    const {token} = await request({url:"/users/wxlogin", data:loginParams, method:"post"});
+    wx.setStorageSync('token', token)
+    // 返回上一层
+    wx.navigateBack({
+      delta: 1,
+    })
+    } catch (error) {
+      console.log(error);
+      
+    }
   }
 })

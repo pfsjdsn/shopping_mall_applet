@@ -12,7 +12,7 @@
   <!-- 右 -->
   <scroll-view scroll-y class="right_content" scroll-top="{{scrollTop}}">
     <view class="good_group" 
-    wx:for="{{rightContent}}" wx:for-index="index1" wx:for-item="item1">
+    wx:for="{{rightContent}}" wx:for-index="index1" wx:for-item="item1" wx:key="index">
       <view class="good_title">
         <text class="delimiter">/</text>
         <text class="title">{{item1.cat_name}}</text>

@@ -38,52 +38,27 @@ Page({
       urls // 需要预览的图片http链接列表
     })
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 添加购物车
+  handleCartAdd() {
+    let cart = wx.getStorageSync('cart') || []
+    // 判断商品是否存在购物车当中
+    let index = cart.findIndex(v => v.goods_id === this.goodsInfo.goods_id)
+    if (index === -1) {
+      // 不存在 第一次添加
+      this.goodsInfo.num = 1
+      this.goodsInfo.checked = true
+      cart.push(this.goodsInfo)
+    } else {
+      // 已存在, num++
+      cart[index].num++
+    }
+    wx.setStorageSync('cart', cart)
+    console.log(cart);
+    wx.showToast({
+      title: '加入成功',
+      icon: 'success',
+      // true防止用户手抖
+      mask: true,
+    })
   }
 })

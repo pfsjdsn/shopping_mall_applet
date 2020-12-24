@@ -46,7 +46,6 @@ Page({
   // 支付
   async handleOrderPay() {
     try {
-      console.log('dddddddddddddddd');
     // 判断缓存中是否有token
     const token  = wx.getStorageSync('token')
     if (!token) {

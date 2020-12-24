@@ -1,4 +1,3 @@
-// pages/goods_list/index.js
 import {request} from "../../request/index.js";
 import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({

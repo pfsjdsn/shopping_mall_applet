@@ -87,6 +87,48 @@
         {
           "name": "auth",
           "pathName": "pages/auth/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "login",
+          "pathName": "pages/login/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "user",
+          "pathName": "pages/user/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "order",
+          "pathName": "pages/order/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "goos_detail",
+          "pathName": "pages/goos_detail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "collect",
+          "pathName": "pages/collect/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "search",
+          "pathName": "pages/search/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "feedback",
+          "pathName": "pages/feedback/index",
           "scene": null
         }
       ]

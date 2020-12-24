@@ -37,6 +37,14 @@ page {
   align-items: center;
   border-left: 3rpx solid #000;
 }
+.goods_name_row .goods_collect .iconshoucang {
+  color: #b2b2b2;
+  font-size: 40rpx;
+}
+.goods_name_row .goods_collect .iconshoucang1 {
+  color: orangered;
+  font-size: 40rpx;
+}
 .goods_info .goods_info_title {
   font-size: 32rpx;
   color: var(--themeColor);

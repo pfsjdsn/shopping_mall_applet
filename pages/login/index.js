@@ -1,4 +1,10 @@
-// pages/login/index.js
+/**
+ * 接口: 无
+ * 微信小程序官方api接口: 无
+ * 微信小程序官方事件: wx.navigateBack（返回上一页面或多级页面）、wx.setStorageSync（存入缓存）
+ * 
+ */
+
 Page({
 
   /**

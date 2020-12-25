@@ -1,1 +1,60 @@
-/* pages/feedback/index.wxss */
+page {
+  background-color: #eee;
+}
+.fb_main {
+  padding: 20rpx;
+  color: #666;
+}
+.fb_main .fb_tips {
+  display: flex;
+  flex-wrap: wrap;
+}
+.fb_main .fb_tips text {
+  width: 30%;
+  padding: 10rpx;
+  text-align: center;
+  background-color: #fff;
+  margin: 20rpx 10rpx;
+}
+.fb_main .fb_content {
+  margin: 20rpx 0 0 0;
+  background-color: #fff;
+}
+.fb_main .fb_content textarea {
+  padding: 10rpx;
+}
+.fb_main .fb_content .fb_tool {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 10rpx 0;
+}
+.fb_main .fb_content .fb_tool button {
+  margin: 0;
+  width: 90rpx;
+  height: 90rpx;
+  font-size: 60rpx;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20rpx 0 0 20rpx;
+  color: #ccc;
+}
+.fb_main .fb_content .fb_tool .up_img_item {
+  border: 1rpx solid red;
+}
+.fb_main .form_btn_wrap {
+  margin: 20rpx 0 0 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.fb_main .form_btn_wrap button {
+  padding: 10rpx;
+  color: #fff;
+  background-color: var(--themeColor);
+  margin: 0;
+  width: 30%;
+}
+.fb_main .form_btn_wrap button .icontijiao {
+  margin: 0 15rpx 0 0;
+}

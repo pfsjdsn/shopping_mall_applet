@@ -1,3 +1,22 @@
+/**
+ * 接口: 搜索列表 search
+ * 微信小程序官方api接口: 无
+ * 微信小程序官方事件: wx.showToast （显示消息提示框）
+ * js:  Math.ceil(向上取整)
+ * async await 异步请求
+ * array.forEach 循环遍历数组
+ * onReachBottom (触底事件) 
+ *   1 判断当前页码是否大于等于总页数
+ *   2 如果否，当前页码++
+ *   3 重新请求页面数据接口
+ * onPullDownRefresh (下拉刷新)
+ *   1 当前页面数据置空
+ *   2 当前页码重置为1
+ *   3 重新请求页面数据接口
+ */
+
+
+
 import {request} from "../../request/index.js";
 import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
@@ -47,11 +66,9 @@ Page({
     const res = await request({url: "/goods/search",data: this.params})
     // 总页数 
     const total = res.total 
-    console.log(total);
     
     // 计算总页数 
     this.totalPages = Math.ceil(total/this.params.pagesize) // Math.ceil向上取整
-    console.log(this.totalPages )
     this.setData({
       goodsList: [...this.data.goodsList, ...res.goods]
     })

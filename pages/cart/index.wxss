@@ -1,5 +1,5 @@
 page {
-  padding-bottom: 90rpx;
+  padding: 0 0 90rpx 0;
 }
 .revice_address_row .address_btn {
   padding: 20rpx;

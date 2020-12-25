@@ -1,16 +1,24 @@
 
+ /**
+ * 接口: /create 获取订单编号 、/req_unifiedorder 预支付、/chkOrder 查询后台订单状态
+ * 微信小程序官方api接口: 微信支付api wx.requestPayment、showToast
+ * 微信小程序官方事件: wx.showToast （显示消息提示框）、wx.getStorageSync（取出缓存）、wx.setStorageSync（存入缓存）
+ * async await 异步请求、 try catch捕获异常
+ * array.filter 过滤数组中的值、array.forEach 循环遍历数组
+ * promise封装请求
+ * 微信支付流程： 
+ *    1 创建订单（获取订单编号： 获取订单编号接口）
+ *    2 准备预支付（获取支付参数pay： 预支付接口）
+ *    3 发起微信支付（提交pay参数： 微信官方支付接口）
+ *    4 查询订单 （查询后台订单状态接口）
+ * 
+ */
+
+
 import regeneratorRuntime from '../../lib/runtime/runtime'; // 解决报错的包
 import {requestPayment, showToast} from '../../untils/asyncWx.js'
 import {request} from "../../request/index.js";
-/**
- * 微信支付流程： 
- *    1 创建订单（获取订单编号）
- *    2 准备预支付（获取支付参数pay）
- *    3 发起微信支付（提交pay参数）
- *    4 查询订单
- * 
- * 
- */
+
 Page({
  
   /**
@@ -63,13 +71,12 @@ Page({
       goods_price: v.goods_price
     }))
     const orderParams = { order_price, consignee_addr}
-    // 获取床单编号 
+    // 获取订单编号 
     const {order_number} = await request({url: "/my/orders/create", method: "POST", data: orderParams})
     // 预支付接口
     const res1 = await request({url:"/my/orders/req_unifiedorder", method: "POST",data: {order_number}})
     // 微信支付
     const res = await requestPayment(pay)
-    console.log(res);
     // 查询后台订单状态
     const res2 = await requst({url: "/my/orders/chkOrder", method: "POST", data: order_number})
     console.log(res2); // 如支付成功，会返回“支付成功”这4个字

@@ -1,1 +1,20 @@
-<Tabs tabs="{{tabs}}" bindtabsItemChange="tabsItemChange"></Tabs>
+<Tabs tabs="{{tabs}}" bindtabsItemChange="tabsItemChange">
+  <view class="fb_main">
+    <view class="fb_title">问题总类</view>
+    <view class="fb_tips">
+      <text  wx:for="{{tipsList}}" wx:key="index">{{item.title}}</text>
+    </view>
+    <view class="fb_content">
+      <textarea placeholder="请描述下您的问题"></textarea>
+      <view class="fb_tool">
+        <button>+</button>
+        <view class="up_img_item">
+          <UpImg></UpImg>
+        </view>
+      </view>
+    </view>
+    <view class="form_btn_wrap">
+      <button type="warn"><text class="iconfont icontijiao"></text>提交</button>
+    </view>
+  </view>
+</Tabs>

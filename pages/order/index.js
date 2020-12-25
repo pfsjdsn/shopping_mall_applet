@@ -1,7 +1,15 @@
-/**
- * 订单接口
+
+ /**
+ * 接口: 订单列表 /all
  * 小程序页面栈最大长度是10， 最多只能打开10个页面
+ * 微信小程序官方api接口: 无
+ * 微信小程序官方事件: getCurrentPages（获取当前页面栈）
+ * js: new Date( 时间戳 * 1000).toLocaleDateString() 时间戳转换
+ * async await 异步请求
+ * array.map 生成新数组元素、array.forEach 循环遍历数组
+ * 
  */
+
 
 import {request} from "../../request/index.js";
 import regeneratorRuntime from '../../lib/runtime/runtime';
@@ -57,7 +65,6 @@ Page({
   // 获取订单列表
   async getOrders(type) {
     const res = await request({url: "/my/orders/all", data: {type}})
-    console.log(res);
     // 时间戳转换
     this.setData({
       orders: res.orders.map(v =>({...v, create_time:(new Date(v.create_time * 1000).toLocaleDateString())}))

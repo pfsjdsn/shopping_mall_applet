@@ -1,5 +1,5 @@
 page {
-  padding-bottom: 90rpx;
+  padding: 0 0 90rpx 0;
 }
 .revice_address_row .user_info_row {
   display: flex;
@@ -91,7 +91,7 @@ page {
 }
 .footer_tool .total_price_wrap {
   flex: 5;
-  padding-right: 15rpx;
+  padding: 0 15rpx 0 0;
   text-align: right;
 }
 .footer_tool .total_price_wrap .total_price .total_price_text {

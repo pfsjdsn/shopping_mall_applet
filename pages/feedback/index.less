@@ -1,0 +1,61 @@
+page {
+  background-color: #eee;
+}
+.fb_main {
+  padding: 20rpx;
+  color: #666;
+  .fb_tips {
+    display: flex;
+    flex-wrap: wrap; // 换行
+    text {
+      width: 30%;
+      padding: 10rpx;
+      text-align: center;
+      background-color: #fff;
+      margin: 20rpx 10rpx;
+    }
+  }
+  .fb_content {
+    margin: 20rpx 0 0 0;
+    background-color: #fff;
+    textarea {
+      padding: 10rpx;
+    }
+    .fb_tool {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 0 10rpx 0;
+      button {
+        margin: 0;
+        width: 90rpx;
+        height: 90rpx;
+        font-size: 60rpx;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20rpx 0 0 20rpx;
+        color: #ccc;
+      }
+      .up_img_item {
+        // margin: 20rpx 0 0 20rpx;
+        border: 1rpx solid red;
+      }
+    }
+  }
+  .form_btn_wrap {
+    margin: 20rpx 0 0 0;
+    display: flex;
+    justify-content: flex-end;// 从行尾位置开始排列
+    button {
+      padding: 10rpx;
+      color: #fff;
+      background-color: var(--themeColor);
+      margin: 0;
+      width: 30%;
+      .icontijiao {
+        margin: 0 15rpx 0 0;
+      }
+    }
+  }
+}

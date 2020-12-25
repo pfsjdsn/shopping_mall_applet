@@ -1,5 +1,5 @@
 page {
-  padding-bottom: 90rpx;
+  padding: 0 0 90rpx 0;
 }
 .detail_swiper swiper {
   height: 65vw;

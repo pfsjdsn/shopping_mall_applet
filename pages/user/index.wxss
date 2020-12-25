@@ -28,7 +28,7 @@ page {
 }
 .user_info_wrap .user_img_wrap .user_info .user_name {
   color: #fff;
-  margin-top: 40rpx;
+  margin: 40rpx 0 0 0;
 }
 .user_info_wrap .user_btn {
   position: absolute;
@@ -47,7 +47,7 @@ page {
 .user_content .user_main {
   position: absolute;
   color: #666;
-  padding-bottom: 100rpx;
+  padding: 0 0 100rpx 0;
   width: 90%;
   left: 50%;
   transform: translateX(-50%);
@@ -67,7 +67,7 @@ page {
 }
 .user_content .user_main .orders_wrap {
   background-color: #fff;
-  margin-top: 30rpx;
+  margin: 30rpx 0 0 0;
 }
 .user_content .user_main .orders_wrap .orders_title {
   padding: 20rpx;
@@ -86,12 +86,12 @@ page {
   font-size: 40rpx;
 }
 .user_content .user_main .address_wrap {
-  margin-top: 30rpx;
+  margin: 30rpx 0 0 0;
   background-color: #fff;
   padding: 20rpx;
 }
 .user_content .user_main .app_info_wrap {
-  margin-top: 30rpx;
+  margin: 30rpx 0 0 0;
   background-color: #fff;
 }
 .user_content .user_main .app_info_wrap .app_info_item {
@@ -103,7 +103,7 @@ page {
   justify-content: space-between;
 }
 .user_content .user_main .recommend_wrap {
-  margin-top: 30rpx;
+  margin: 30rpx 0 0 0;
   background-color: #fff;
   padding: 20rpx;
 }

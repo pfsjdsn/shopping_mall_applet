@@ -1,4 +1,12 @@
-// pages/collect/index.js
+/**
+ * 接口: 分类商品 无
+ * 微信小程序官方api接口: 无
+ * 微信小程序官方事件: wx.setStorageSync（存入缓存）
+ * array.forEach 循环遍历数组
+ * 
+ */
+
+
 Page({
 
   /**

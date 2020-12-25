@@ -1,3 +1,15 @@
+/**
+ * 接口: 无
+ * 微信小程序官方api接口: 登录api wx.chooseAddress
+ * 微信小程序官方事件: getCurrentPages（获取当前页面栈） 、wx.setStorageSync（存入缓存）、 wx.getStorageSync（取出缓存）、wx.previewImage（预览图片）、wx.showToast
+ * async await 异步请求、 try catch捕获异常
+ * array.findIndex 找到符合条件的索引、、array.map 生成新数组、array.some 测试每个元素的函数(一真为真)
+ * promise封装请求
+ * 
+ */
+
+
+
 import {request} from "../../request/index.js";
 import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
@@ -63,7 +75,6 @@ Page({
       cart[index].num++
     }
     wx.setStorageSync('cart', cart)
-    console.log(cart);
     wx.showToast({
       title: '加入成功',
       icon: 'success',

@@ -1,4 +1,12 @@
-// pages/user/index.js
+/**
+ * 接口: 无
+ * 微信小程序官方api接口: 无
+ * 微信小程序官方事件: wx.getStorageSync（取出缓存）
+ * array.findIndex 找到符合条件的索引、array.forEach 循环遍历数组
+ * 
+ */
+
+
 Page({
 
   /**

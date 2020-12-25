@@ -10,7 +10,7 @@ page {
   background-color: #fff;
   flex: 1;
   height: 100%;
-  padding-left: 30rpx;
+  padding: 0 0 0 30rpx;
 }
 .search_row .btn {
   width: 110rpx;
@@ -23,7 +23,7 @@ page {
   font-size: 26rpx;
 }
 .search_content {
-  margin-top: 30rpx;
+  margin: 30rpx 0 0 0;
 }
 .search_content .search_item {
   background-color: #fff;

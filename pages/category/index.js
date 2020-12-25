@@ -1,4 +1,13 @@
-// pages/category/index.js
+/**
+ * 接口: 分类商品 categories
+ * 微信小程序官方api接口: 无
+ * 微信小程序官方事件: wx.setStorageSync（存入缓存）
+ * async await 异步请求、 try catch捕获异常
+ * array.map 返回一个新数组
+ * 
+ */
+
+
 import {request} from "../../request/index.js";
 import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({

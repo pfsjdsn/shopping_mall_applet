@@ -1,3 +1,12 @@
+/**
+ * 接口: 无
+ * 微信小程序官方api接口: 登录api wx.chooseAddress、调起客户端小程序设置界面api wx.openSetting
+ * 微信小程序官方事件: wx.navigateBack（返回上一页面或多级页面）、wx.getStorageSync（取出缓存）、wx.setStorageSync（存入缓存）
+ * async await 异步请求、 try catch捕获异常
+ * array.findIndex 找到符合条件的索引、array.forEach 循环遍历数组
+ * promise封装请求
+ * 
+ */
 
 import {getSetting,chooseAddress,openSetting,showModal,showToast} from '../../untils/asyncWx.js'
 import regeneratorRuntime from '../../lib/runtime/runtime'; // 解决报错的包

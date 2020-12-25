@@ -18,6 +18,7 @@ Page({
       }
       
     ],
+    tipsList: [{title: '功能建议'},{title: '购买遇到的问题'},{title: '性能问题'},{title: '其它'}]
   },
   tabsItemChange(e) {
     //被选中的索引

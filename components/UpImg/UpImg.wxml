@@ -1,4 +1,4 @@
 <view class="up_img_wrap">
-  <image></image>
-  <text class="iconfont iconcha"></text>
+  <image src="{{src}}"></image>
+  <icon type="clear" size="23" color="red" catchtap="handleRemoveImg"></icon>
 </view>

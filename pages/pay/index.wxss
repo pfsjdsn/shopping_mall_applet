@@ -101,6 +101,7 @@ page {
 }
 .footer_tool .total_price_wrap view:nth-child(2) {
   font-weight: 600;
+  color: red;
 }
 .footer_tool .order_pay_wrap {
   flex: 3;

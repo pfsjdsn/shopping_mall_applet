@@ -39,7 +39,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.14.0",
-  "appid": "wx28d4200679597c66",
+  "appid": "wxdbe04c300fd0f682",
   "projectname": "heima-goodBuy",
   "debugOptions": {
     "hidedInDevtools": []
@@ -129,6 +129,12 @@
         {
           "name": "feedback",
           "pathName": "pages/feedback/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "demo",
+          "pathName": "pages/demo/demo",
           "scene": null
         }
       ]

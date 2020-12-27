@@ -29,6 +29,7 @@ page {
 .user_info_wrap .user_img_wrap .user_info .user_name {
   color: #fff;
   margin: 40rpx 0 0 0;
+  font-size: 40rpx;
 }
 .user_info_wrap .user_btn {
   position: absolute;

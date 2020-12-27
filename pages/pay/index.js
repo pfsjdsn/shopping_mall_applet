@@ -90,7 +90,8 @@ Page({
       url: '/pages/order/index',
     })
     } catch (error) {
-      await showToast({title: "支付失败！"})
+      // await showToast({title: "支付失败！"})
+      await showToast({title: "暂未开发支付功能！"})
       console.log(error);
       
     }

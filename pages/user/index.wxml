@@ -39,7 +39,7 @@
     <view class="app_info_wrap">
       <view class="app_info_item app_info_contact">
         <text>联系客服</text>
-        <text>400-618-1234</text>
+        <text>124-xxx-789</text>
       </view>
       <navigator class="app_info_item" url="/pages/feedback/index">
         <text>意见反馈</text>

@@ -1,58 +1,58 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/category/index",
     "pages/goods_list/index",
-    "pages/goos_detail/index",
     "pages/cart/index",
     "pages/collect/index",
+    "pages/goods_detail/main",
     "pages/order/index",
     "pages/search/index",
     "pages/user/index",
     "pages/feedback/index",
     "pages/login/index",
     "pages/auth/index",
-    "pages/pay/index"
- 
+    "pages/pay/index",
+    "pages/demo/demo"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#346efe",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff8700",
     "navigationBarTitleText": "buy",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#999",
-    "selectedColor": "#ff2d4a",
+    "selectedColor": "#ff8700",
     "backgroundColor": "#fafafa",
     "position": "bottom",
     "borderStyle": "black",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "icons/home.png",
-      "selectedIconPath": "icons/home_o.png"
-    },
-    {
-      "pagePath": "pages/category/index",
-      "text": "分类",
-      "iconPath": "icons/category.png",
-      "selectedIconPath": "icons/category_o.png"
-    },
-    {
-      "pagePath": "pages/cart/index",
-      "text": "购物车",
-      "iconPath": "icons/car.png",
-      "selectedIconPath": "icons/car_o.png"
-    },
-    {
-      "pagePath": "pages/user/index",
-      "text": "我的",
-      "iconPath": "icons/my.png",
-      "selectedIconPath": "icons/my_o.png"
-    }
-  ]
-
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home_o.png"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "分类",
+        "iconPath": "icons/category.png",
+        "selectedIconPath": "icons/category_o.png"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "text": "购物车",
+        "iconPath": "icons/car.png",
+        "selectedIconPath": "icons/car_o.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "icons/my.png",
+        "selectedIconPath": "icons/my_o.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

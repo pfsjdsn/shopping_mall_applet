@@ -1,11 +1,10 @@
 <view class="detail_swiper">
-  <swiper autoplay="true" circular="true" indicator-dots="true">
+  <swiper autoplay="true" circular="true" indicator-dots="true" interval="2500">
     <swiper-item wx:for="{{goodsObj.pics}}" wx:key="goods_id" bindtap="handlePrevewImage" data-urls="{{item.pics_mid}}">
       <image mode="widthFix" src="{{item.pics_mid}}"></image>
     </swiper-item>
   </swiper>
 </view>
-
 <view class="goods_price">￥{{goodsObj.goods_price}}</view>
 <view class="goods_name_row">
   <view class="goods_name">{{goodsObj.goods_name}}</view>

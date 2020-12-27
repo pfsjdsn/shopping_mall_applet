@@ -15,8 +15,6 @@
  *   3 重新请求页面数据接口
  */
 
-
-
 import {request} from "../../request/index.js";
 import regeneratorRuntime from '../../lib/runtime/runtime';
 Page({
@@ -58,7 +56,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.params.cid = options.cid
+    console.log(options, 'options+++++');
+    
+    this.params.cid = options.cid || ''
+    this.params.query = options.query || ''
     this.getGoodsList()
   },
   // 获取商品列表数据

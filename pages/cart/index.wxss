@@ -6,6 +6,9 @@ page {
 }
 .revice_address_row .address_btn button {
   width: 60%;
+  background-color: #ff8700;
+  border-color: #ff8700;
+  color: #fff;
 }
 .revice_address_row .user_info_row {
   display: flex;
@@ -127,6 +130,7 @@ page {
 }
 .footer_tool .total_price_wrap view:nth-child(2) {
   font-weight: 600;
+  color: red;
 }
 .footer_tool .order_pay_wrap {
   flex: 3;

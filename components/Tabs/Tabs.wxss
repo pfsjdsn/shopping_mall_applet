@@ -12,7 +12,7 @@
 }
 .active {
   color: var (--themeColor);
-  border-bottom: 5rpx solid currentColor;
+  border-bottom: 5rpx solid #ff8700;
 }
 .tabs_content {
 }

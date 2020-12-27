@@ -5,16 +5,16 @@
       <text  wx:for="{{tipsList}}" wx:key="index">{{item.title}}</text>
     </view>
     <view class="fb_content">
-      <textarea placeholder="请描述下您的问题"></textarea>
+      <textarea placeholder="请描述下您的问题" bindinput="handleTextInput" value="{{textValue}}"></textarea>
       <view class="fb_tool">
-        <button>+</button>
-        <view class="up_img_item">
-          <UpImg></UpImg>
+        <button bindtap="handleChooseImg" >+</button>
+        <view class="up_img_item" wx:for="{{chooseImgs}}" wx:key="*this">
+          <UpImg class="up_img_item_item" src="{{item}}" bindhandleRemoveImg="handleRemoveImg" data-index="{{index}}"></UpImg>
         </view>
       </view>
     </view>
     <view class="form_btn_wrap">
-      <button type="warn"><text class="iconfont icontijiao"></text>提交</button>
+      <button type="warn" bindtap="handleFormSubmit"><text class="iconfont icontijiao"></text>提交</button>
     </view>
   </view>
 </Tabs>

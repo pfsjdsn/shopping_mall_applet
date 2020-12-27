@@ -5,7 +5,7 @@
       <navigator class="goods_item" 
       wx:for="{{goodsList}}"
       wx:key="{{goods_id}}"
-      url="/pages/goos_detail/index?goods_id={{item.goods_id}}"
+      url="/pages/goods_detail/main?goods_id={{item.goods_id}}"
       >
         <!-- 左图 -->
         <!-- <view class="goods_img_wrap"> -->
@@ -19,6 +19,10 @@
       </navigator>
     </view>
   </block>
-  <block wx:if="{{tabs[1].isActive}}">1</block>
-  <block wx:if="{{tabs[2].isActive}}">2</block>
+  <block wx:if="{{tabs[1].isActive}}">
+    暂无数据！
+  </block>
+  <block wx:if="{{tabs[2].isActive}}">
+    暂无数据！
+  </block>
 </Tabs>

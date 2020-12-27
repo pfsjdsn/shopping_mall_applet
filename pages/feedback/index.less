@@ -8,6 +8,7 @@ page {
     display: flex;
     flex-wrap: wrap; // 换行
     text {
+      line-height: 2em;
       width: 30%;
       padding: 10rpx;
       text-align: center;
@@ -23,10 +24,11 @@ page {
     }
     .fb_tool {
       display: flex;
+      align-items: center;
       flex-wrap: wrap;
       padding: 0 0 10rpx 0;
+      margin: 30rpx 0 0 0;
       button {
-        margin: 0;
         width: 90rpx;
         height: 90rpx;
         font-size: 60rpx;
@@ -38,8 +40,10 @@ page {
         color: #ccc;
       }
       .up_img_item {
-        // margin: 20rpx 0 0 20rpx;
-        border: 1rpx solid red;
+        display: flex;
+        .up_img_item_item {
+          margin: 20rpx 20rpx 10rpx 35rpx;
+        }
       }
     }
   }

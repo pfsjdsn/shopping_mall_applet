@@ -12,8 +12,7 @@
     "pages/feedback/index",
     "pages/login/index",
     "pages/auth/index",
-    "pages/pay/index",
-    "pages/demo/demo"
+    "pages/pay/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
